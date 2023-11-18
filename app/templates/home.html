@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+
+    <body class="loggedin">
+        <nav class="navtop">
+            <div>
+                <h1>@an4ouce</h1>
+                <a href="{{ url_for('home') }}"><i class="fa fa-home"></i>На главную</a>
+
+                <a href="{{ url_for('logout') }}"><i class="fa fa-sign-out"></i>Выйти</a>
+            </div>
+        </nav>
+    </body>
+
+
+{% block content %}
+
+<h2>Добро пожаловать на мою страницу!</h2>
+<p style="color: black;">Привет, {{ username }}! Посмотри мои последние проекты на Github:</p>
+<p style="background-color: lime;text-align: center;font-weight: bolder;">
+    <a href="https://github.com/an4ouce/modern_tech_dev_misis">Разработка этого сайта на Flask</a>
+</p>
+<p style="background-color: lime; text-align: center;font-weight: bolder;">
+    <a href="https://github.com/an4ouce/misis/blob/main/Prog_lang_homework/Homework_5.ipynb">Задачи по Python (ООП)</a>
+</p>
+<p style="background-color: lime; text-align: center; font-weight: bolder;">
+    <a href="https://github.com/an4ouce/my_ds_projects">Мои проекты по data science</a>
+</p>
+
+{% endblock %}
+
+</html>

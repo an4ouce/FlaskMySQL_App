@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Главная страница</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <body>
+        <div class="login">
+            <h1>Добро пожаловать!<br />Войдите или зарегистрируйтесь</h1>
+            <div class="links">
+                <a href="{{ url_for('login') }}" class="active">Вход</a>
+                <a href="{{ url_for('register') }}">Регистрация</a>
+                <a href="{{ url_for('contact') }}">Обратная связь</a>
+            </div>
+
+            <form action="" method="post">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <label for="username">
+                    <i class="fa fa-user"></i>
+                </label>
+                <input type="text" name="username" placeholder="Логин" id="username" required>
+                <label for="password">
+                    <i class="fa fa-lock"></i>
+                </label>
+            <div class="password">
+	            <input type="password" id="password-input" placeholder="Пароль" name="password">
+                <a href="#" class="password-control" onclick="return show_hide_password(this);">
+                </a>
+            </div>
+            <script>
+                function show_hide_password(target){
+	            var input = document.getElementById('password-input');
+	            if (input.getAttribute('type') == 'password') {
+		            target.classList.add('view');
+		            input.setAttribute('type', 'text');
+	          } else {
+		            target.classList.remove('view');
+		            input.setAttribute('type', 'password');
+	          }
+	            return false;
+
+              }
+            </script>
+                <div class="msg">{{ msg }}</div>
+                <input type="submit" value="Войти">
+            </form>
+        </div>
+    </body>
+</html>
