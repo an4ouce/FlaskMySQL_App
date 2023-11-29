@@ -1,30 +1,30 @@
 # FLaskMySQL_App
 
-![logo](flask_mysql.png)
+![logo](https://github.com/an4ouce/FlaskMySQL_App/tree/master/pictures/flask_mysql.png)
 
 Репозиторий содержит проект с мини-сайтом, написанным на Python с помощью фреймворка Flask.
 Содержит форму регистрации пользователей, форму входа на сайт (для зарегистрированных пользователей), а также форму обратной связи.
 
-Главная страница:
+*Главная страница:*
 
-![logo](login.png)
+![logo](https://github.com/an4ouce/FlaskMySQL_App/tree/master/pictures/login.png)
 
-Страница регистрации:
+*Страница регистрации:*
 
-![logo](register.png)
+![logo](https://github.com/an4ouce/FlaskMySQL_App/tree/master/pictures/register.png)
 
 Регистрирует новых пользователей, записывает их в базу MySQL. 
 К паролю требования такие:
-- минимум 8 символов;
-- минимум одна цифра в верхнем регистре;
+- минимум 8 символов (буквы, цифры, спецсимволы);
+- минимум одна буква в верхнем регистре;
 - хотя бы один спецсимвол.
 
 Все пароли хэшируются с добавлением соли.
 При входе на сайт считается хэш введенного пароля, сранивается с хэшированным паролем, хранящимся в базе, при совпадении пускает на сайт. Также есть кнопка logout для выхода с сайта.
 
-Страница обратной связи:
+*Страница обратной связи:*
 
-![logo](message.png)
+![logo](https://github.com/an4ouce/FlaskMySQL_App/tree/master/pictures/message.png)
 
 Позволяет отправить сообщение мне на электронную почту, предварительно отсеивая ботов с помощью Google ReCAPTCHA.
 
@@ -58,4 +58,4 @@ docker-compose down
 
 ## Enjoy! 
 
-![logo](151599-smaylik-veselyy-14.jpg)
+![logo](https://github.com/an4ouce/FlaskMySQL_App/tree/master/pictures/151599-smaylik-veselyy-14.jpg)
